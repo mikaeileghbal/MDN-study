@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <form method="post">
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" />
+        </li>
+        <li>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="user_email" />
+        </li>
+        <li>
+          <label for="msg"
+            >Message:<abbr title="required" aria-label="required"
+              >*</abbr
+            ></label
+          >
+          <textarea id="msg" name="user_message"></textarea>
+        </li>
+
+        <li class="button">
+          <button type="submit">Send your <span>message</span></button>
+        </li>
+      </ul>
+    </form>
+
+    <br />
+
+    <form action="" novalidate>
+      <h1>Payment form</h1>
+      <p>
+        Required fields are foloowed by
+        <strong><abbr title="required">*</abbr></strong
+        >.
+      </p>
+      <section>
+        <!-- Contact information section -->
+        <h2>Contact information</h2>
+        <ul>
+          <li>
+            <label for="soup">Soup</label>
+            <input type="radio" id="soup" name="meal" value="soup" checked />
+          </li>
+          <li>
+            <label for="curry">Curry</label>
+            <input type="radio" id="curry" name="meal" value="curry" />
+          </li>
+          <li>
+            <label for="pizza">Pizza</label>
+            <input type="radio" id="pizza" name="meal" value="pizza" />
+          </li>
+        </ul>
+
+        <p>
+          <label for="name">
+            <span>Name: </span><strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="text" id="name" name="username" />
+        </p>
+        <p>
+          <label for="email">
+            <span>Email: </span><strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="email" id="email" name="usermail" />
+        </p>
+        <p>
+          <label for="pwd">
+            <span>Password: </span
+            ><strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="password" id="pwd" name="password" />
+        </p>
+      </section>
+      <section>
+        <!-- Payment Information Section -->
+        <h2>Payment information</h2>
+        <p>
+          <label for="card">
+            <span>Card type: </span
+            ><strong><abbr title="required">*</abbr></strong>
+          </label>
+          <select name="usercard" id="card">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+        </p>
+        <p>
+          <label for="number">
+            <span>Card number: </span
+            ><strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input type="tel" id="number" name="cardnumber" />
+        </p>
+        <p>
+          <label for="expiration">
+            <span>Expiration date: </span
+            ><strong><abbr title="required">*</abbr></strong>
+          </label>
+          <input
+            type="text"
+            id="expiration"
+            name="exp"
+            required="true"
+            placeholder="MM/YY"
+            pattern="^(0[1-9]|1[0-2])\/([0-9]{2})"
+          />
+        </p>
+      </section>
+      <section>
+        <p class="button">
+          <button type="submit">Validate the paymnent</button>
+          <input type="submit" formaction="default.html" value="Send Data 1" />
+          <button type="reset">Clear</button>
+          <input
+            type="image"
+            src="../images/ad-1.png"
+            width="200"
+            height="100"
+          />
+        </p>
+      </section>
+    </form>
+
+    <br />
+    <hr />
+    <br />
+
+    <fieldset>
+      <legend>Choose all the vegetables you like to eat</legend>
+      <ul>
+        <li>
+          <label for="carrots">Carrots</label>
+          <input
+            type="checkbox"
+            id="carrots"
+            name="vegetable"
+            value="carrots"
+            checked
+          />
+        </li>
+        <li>
+          <label for="peas">Peas</label>
+          <input type="checkbox" id="peas" name="vegetable" value="peas" />
+        </li>
+        <li>
+          <label for="cabbage">Cabbage</label>
+          <input
+            type="checkbox"
+            id="cabbage"
+            name="vegetable"
+            value="cabbage"
+          />
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>What is your favorite meal?</legend>
+      <ul>
+        <li>
+          <label for="soup">Soup</label>
+          <input type="radio" id="soup" name="meal" value="soup" />
+        </li>
+        <li>
+          <label for="curry">Curry</label>
+          <input type="radio" id="curry" name="meal" value="curry" />
+        </li>
+        <li>
+          <label for="pizza">Pizza</label>
+          <input type="radio" id="pizza" name="meal" value="pizza" />
+        </li>
+      </ul>
+    </fieldset>
+
+    <p>
+      <label for="file">Choose a file to upload</label>
+      <input
+        type="file"
+        name="file"
+        id="file"
+        accept="image/*;capture=camera"
+        multiple
+      />
+    </p>
+
+    <input type="number" min="0" max="1" step="0.01" />
+    <br />
+    <label for="price">Choose a maximum hous price: </label>
+    <input
+      type="range"
+      min="50000"
+      max="500000"
+      step="100"
+      value="250000"
+      name="price"
+      id="price"
+    />
+    <output class="price-output" for="price"></output>
+
+    <input type="datetime-local" />
+    <input type="month" />
+    <input type="week" />
+    <input type="time" />
+
+    <textarea name="" id="" cols="30" rows="10">Welcome </textarea>
+
+    <select id="groups" name="groups">
+      <optgroup label="fruits">
+        <option>Banana</option>
+        <option selected>Cherry</option>
+        <option>Lemon</option>
+      </optgroup>
+      <optgroup label="vegetables">
+        <option>Carrot</option>
+        <option>Eggplant</option>
+        <option>Potato</option>
+      </optgroup>
+    </select>
+
+    <meter min="0" max="100" low="33" high="75" optimum="80" value="80">
+      70
+    </meter>
+
+    <!-- Styls for bad style form elements -->
+    <form id="formbad">
+      <p>
+        <label for="search">search: </label>
+        <input id="search" name="search" type="search" />
+      </p>
+      <p>
+        <label for="text">text: </label>
+        <input id="text" name="text" type="text" />
+      </p>
+      <p>
+        <label for="date">date: </label>
+        <input id="date" name="date" type="datetime-local" />
+      </p>
+      <p>
+        <label for="radio">radio: </label>
+        <input id="radio" name="radio" type="radio" />
+        <input id="radio" name="radio" type="radio" />
+        <input id="radio" name="radio" type="radio" />
+      </p>
+      <p>
+        <label for="checkbox">checkbox: </label>
+        <input id="checkbox" name="checkbox" type="checkbox" />
+      </p>
+      <p><input type="color" /></p>
+      <p><input type="submit" value="submit" /></p>
+      <p><input type="button" value="button" /></p>
+    </form>
+    <!-- Bad form elemets ends -->
+
+    <script src="form.js"></script>
+  </body>
+</html>

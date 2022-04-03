@@ -1,0 +1,47 @@
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  display: block;
+  margin-top: 1em;
+  padding: 8px 16px;
+}
+
+form span {
+  display: inline-block;
+  padding: 10px;
+}
+
+#uploadInput {
+  display: none;
+}
+
+#btnFileSelect {
+  border: 1px solid #333;
+  background-color: cadetblue;
+  color: white;
+  padding: 8px 16px;
+  width: 100%;
+}
+
+/* drag drop files */
+/* =============== */
+
+.dropbox {
+  width: 200px;
+  height: 200px;
+  background-color: cadetblue;
+  margin: 16px auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.preview img {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-left: 10px;
+}

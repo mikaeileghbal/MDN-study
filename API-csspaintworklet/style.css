@@ -1,0 +1,12 @@
+body {
+  max-width: 500px;
+  margin: auto;
+}
+.fancy {
+  display: inline-block;
+  background-image: paint(headerHighlight);
+}
+
+.half {
+  width: 50%;
+}

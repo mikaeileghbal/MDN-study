@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1.3em;
+  box-sizing: inherit;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:required {
+  border: 1px solid black;
+}
+
+input:optional {
+  border: 1px solid silver;
+}
+
+input {
+  font-family: inherit;
+  font-size: 100%;
+  display: block;
+  width: 100%;
+  padding: 0.2em 0.5em;
+  margin-top: 0.5em;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px #ccc inset;
+}
+
+fieldset > div {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+button {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  height: 30px;
+  margin-top: 1.5em;
+}
+
+fieldset {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1em 2em;
+}
+
+legend {
+  background-color: #333;
+  padding: 0.3em 0.8em;
+  color: white;
+}
+label {
+  width: 100%;
+}
+
+input + span {
+  position: relative;
+}
+
+input:required + span::after {
+  position: absolute;
+  content: "required";
+  font-size: 0.7rem;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  top: -26px;
+  left: -70px;
+}
+
+input + span::before {
+  position: absolute;
+  right: -20px;
+  top: 12px;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:invalid + span::before {
+  content: "✖";
+  color: red;
+}
+
+input:valid + span::before {
+  content: "✓";
+  color: green;
+}
+
+input:out-of-range + span::after {
+  color: white;
+  background-color: red;
+  width: 160px;
+  content: "Outside allowed value range";
+  left: -182px;
+}
+
+/* disabled styles */
+
+input[type="checkbox"] {
+  width: auto;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+label[for="billing-checkbox"] {
+  display: inline-block;
+  width: auto;
+}
+input[type="text"]:disabled {
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.disabled-label {
+  color: #aaa;
+}

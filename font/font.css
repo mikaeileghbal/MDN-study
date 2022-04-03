@@ -1,0 +1,6 @@
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.font-loaded h1 {
+  font-family: "newhand";
+}
