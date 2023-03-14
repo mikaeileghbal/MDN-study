@@ -47,3 +47,31 @@ area.addEventListener("mousemove", (e) => {
 document.addEventListener("mousemove", (e) => {
   console.log(`mouse X: ${e.pageX} mouse Y: ${e.pageY}`);
 });
+
+document.addEventListener("scroll", (e) => {
+  setTimeout(animateText, 100);
+});
+
+function animateText() {
+  const area = document.querySelector(".animated-text");
+  console.log(window.scrollY);
+  if (window.scrollY === 80) {
+    area.style.transform = "translateY(-10px)";
+    area.style.opacity = 0.75;
+  }
+
+  if (window.scrollY === 120) {
+    area.style.transform = "translateY(-20px)";
+    area.style.opacity = 0.5;
+  }
+
+  if (window.scrollY === 160) {
+    area.style.transform = "translateY(-30px)";
+    area.style.opacity = 0.25;
+  }
+
+  if (window.scrollY === 200) {
+    area.style.transform = "translateY(-40px)";
+    area.style.opacity = 0;
+  }
+}

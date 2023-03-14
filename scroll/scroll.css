@@ -21,3 +21,8 @@
   border: 4px solid #7fdf55;
   margin: auto;
 }
+
+.animated-text {
+  transition: all 0.5s linear;
+  position: fixed;
+}
